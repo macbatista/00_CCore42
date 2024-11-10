@@ -1,42 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 08:51:19 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/10 08:51:20 by mcrispim         ###   ########.fr       */
+/*   Created: 2024/11/10 08:51:01 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/10 08:51:02 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*a;
 
 	i = 0;
-	a = b;
-	while (i < len)
+	a = s;
+	while (i < n)
 	{
-		a[i] = c;
+		a[i] = '\0';
 		i++;
 	}
-	return (b);
 }
 
 /* int	main(int c, char **v)
 {
-	char	str[50] = "Olá, mundo!";
-	char	str2[50] = "Olá, mundo!";
+	int		i;
+	size_t	n;
+	char	str0[50] = "12345678901234567890";
+	char	str1[50] = "12345678901234567890";
 
 	(void)c;
 	(void)v;
-	memset(str, 38, 5);
-	printf("Verdadeira: %s\n", str);
-	ft_memset(str2, 38, 5);
-	printf("   A minha: %s\n", str2);
+	n = 0;
+	i = 1;
+	ft_bzero(str1, n);
+	bzero(str0, n);
+	printf("A Verdadeira: %c", str0[0]);
+	while (i < 21)
+		printf("%c", str0[i++]);
+	printf("\n");
+	i = 1;
+	printf("     A minha: %c", str1[0]);
+	while (i < 21)
+		printf("%c", str1[i++]);
+	printf("\n");
 } */

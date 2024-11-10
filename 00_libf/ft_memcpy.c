@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 08:51:15 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/10 08:51:16 by mcrispim         ###   ########.fr       */
+/*   Created: 2024/11/10 08:51:17 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/10 08:51:18 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <string.h>
 
-int	ft_isprint(char c)
+ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		/* code */
+	}
 }
 
-/* int	main(int c, char **v)
+int	main(void)
 {
-	(void)c;
-	printf("Verdadeira = %d\n", isprint(v[1][0]));
-	printf("     Minha = %d\n", ft_isprint(v[1][0]));
-} */
+	char	src1[50] = "File to you";
+	char	dst1[50] = "Luck you";
+	char	src2[50] = "File to you";
+	char	dst2[50] = "Luck you";
+
+	memcpy(dst1, src1, 1);
+	printf("Verdadeira:%s\n", (dst1));
+	ft_memcpy(dst2, src2, 1);
+	printf("   A minha:%s\n", (dst2));
+}

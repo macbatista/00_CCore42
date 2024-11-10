@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcrispim <mcrispim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcelobatista <marcelobatista@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:19:16 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/08 15:18:13 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/10 08:47:22 by marcelobati      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_isalpha(char c)
 	return (0);
 }
 
-int	main(int c, char **v)
+/* int	main(int c, char **v)
 {
 	(void)c;
 	printf("Verdadeira = %d\n", isalpha(v[1][0]));
 	printf("     Minha = %d\n", ft_isalpha(v[1][0]));
-}
+} */

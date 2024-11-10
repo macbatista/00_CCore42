@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/10 08:51:22 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/10 08:51:23 by mcrispim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -11,9 +23,9 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	main(int c, char **v)
+/* int	main(int c, char **v)
 {
 	(void)c;
 	printf("Verdadeira = %lu\n", strlen(v[1]));
 	printf("     Minha = %lu\n", ft_strlen(v[1]));
-}
+} */
