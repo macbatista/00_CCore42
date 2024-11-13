@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:27:53 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/10 08:50:56 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/11 01:04:57 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *nptr)
 	return (value *= sign);
 }
 
-/* int	main(int argc, char **argv)
+/*  int	main(int argc, char **argv)
 {
 	char	min[] = "-2147483648";
 	char	max[] = "21474836479";
