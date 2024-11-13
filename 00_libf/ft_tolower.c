@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 00:53:58 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/11 00:54:45 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:35:21 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-int	main(int c, char **v)
+
+/* int	main(int c, char **v)
 {
-    int i = 0;
+	int i = 0;
 
 	(void)c;
 	printf("Verdadeira: %c\n", tolower(v[1][0]));
 	printf("   A minha: %c\n", ft_tolower(v[1][0]));
-
-}
+} */

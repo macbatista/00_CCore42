@@ -6,54 +6,54 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:19:09 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/13 12:49:17 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:34:57 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t i = 0;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    if (!*little)
-        return (char *)big;
-
-    while (big[i] && i < len)
-    {
-        j = 0;
-        while (little[j] && big[i + j] && i + j < len && big[i + j] == little[j])
-        {
-            j++;
-        }
-        if (!little[j])
-            return (char *)&big[i];
-        i++;
-    }
-
-    return NULL;
+	i = 0;
+	if (!*little)
+		return ((char *)big);
+	while (big[i] && i < len)
+	{
+		j = 0;
+		while (little[j] && big[i + j] && i + j < len && big[i
+				+ j] == little[j])
+		{
+			j++;
+		}
+		if (!little[j])
+			return ((char *)&big[i]);
+		i++;
+	}
+	return (NULL);
 }
 
 /* int main(int c, char **v)
 {
-    (void)c;
+	(void)c;
 
-    char big[] = "Hello World";
-    size_t len = 10;
+	char big[] = "Hello World";
+	size_t len = 10;
 
-    char *result = strnstr(big, v[1], len);
+	char *result = strnstr(big, v[1], len);
 
-    if (result != NULL)
-        printf("%s\n", result);
-    else
-        printf("NULL\n");
+	if (result != NULL)
+		printf("%s\n", result);
+	else
+		printf("NULL\n");
 
-    char *result2 = ft_strnstr(big, v[1], len);
+	char *result2 = ft_strnstr(big, v[1], len);
 
-    if (result2 != NULL)
-        printf("%s\n", result2);
-    else
-        printf("NULL\n");
+	if (result2 != NULL)
+		printf("%s\n", result2);
+	else
+		printf("NULL\n");
 } */
