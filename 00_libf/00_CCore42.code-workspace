@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"editor.tabCompletion": "on",
+		"files.associations": {
+			"stdio.h": "c",
+			"unistd.h": "c"
+		},
+		"editor.autoIndent": "none",
+		"editor.defaultFormatter": "keyhr.42-c-format",
+		"[c]": {
+			"editor.defaultFormatter": "ms-vscode.cpptools"
+		}
+	}
+}
