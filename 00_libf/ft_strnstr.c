@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcrispim <mcrispim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:19:09 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/13 11:53:49 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:49:17 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,24 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     return NULL;
 }
 
-int main(int c, char **v)
+/* int main(int c, char **v)
 {
     (void)c;
-    (void)v;
 
     char big[] = "Hello World";
-    char little[] = "ll";
     size_t len = 10;
 
-    char *result = strnstr(big, little, len);
+    char *result = strnstr(big, v[1], len);
 
     if (result != NULL)
         printf("%s\n", result);
     else
         printf("NULL\n");
 
-    char *result2 = ft_strnstr(big, little, len);
+    char *result2 = ft_strnstr(big, v[1], len);
 
     if (result2 != NULL)
         printf("%s\n", result2);
     else
         printf("NULL\n");
-}
+} */
