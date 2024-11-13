@@ -1,14 +1,63 @@
+#include <stdio.h>
+#include <string.h>
 
-int main(int c, char **v) {
-    
-    strchr(c[1],c[2][0]);
+size_t ft_strlen(const char *s)
+{
+    size_t i;
 
-    char *result = manual_strchr(string, target);
-    if (result) {
-        printf("Caractere '%c' encontrado na posição: %ld\n", target, result - string);
-    } else {
-        printf("Caractere '%c' não encontrado.\n", target);
+    i = 0;
+    while (s[i])
+        i++;
+    return (i);
+}
+
+char *ft_strchr(const char *s, int c)
+{
+    size_t j = 0;
+
+    while (s[j] != '\0')
+    {
+        if (s[j] == (unsigned char)c)
+        {
+            return (char *)&s[j];
+        }
+        j++;
     }
-    
+
+    if (c == '\0')
+    {
+        return (char *)&s[j];
+    }
+
+    return NULL;
+}
+
+int main(int argc, char **argv)
+{
+    (void)argc;
+
+    char a = '1';
+    char *found1 = strchr(argv[1], a);
+
+    if (found1)
+    {
+        printf("Caractere '%c' encontrado na posição: %ld\n", a, found1 - argv[1]);
+    }
+    else
+    {
+        printf("Caractere '%c' não encontrado na string.\n", a);
+    }
+
+    char *found2 = ft_strchr(argv[1], a);
+
+    if (found2)
+    {
+        printf("Caractere '%c' encontrado na posição: %ld\n", a, found2 - argv[1]);
+    }
+    else
+    {
+        printf("Caractere '%c' não encontrado na string.\n", a);
+    }
+
     return 0;
 }
