@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:29:13 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/13 13:34:11 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:48:10 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 (void) v;
 
 const void	*s = "Hello World";
-int			a = 'W';
+int			a = ' ';
 size_t		n = 20;
 
 char		*result1 = memchr(s, a, n);

@@ -1,0 +1,4 @@
+python3 -m c_formatter_42 *.c
+
+#include <bsd/string.h>
+original function compiles only on terminal with cc -lbsd ft_strnstr.c

@@ -11,18 +11,45 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
- {
-	
- }
+#include <bsd/string.h>
+#include <stdio.h>
+#include <string.h>
 
-int	main(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	char	src[] = "Exemplo de string";
-	char	dst[10];
-	size_t	len;
+	size_t	i;
 
-	len = ft_strlcpy(dst, src, sizeof(dst));
-	printf("Destino: %s\n", dst); // Saída: "Exemplo d"
-	printf("Comprimento: %zu\n", len);
+	i = 0;
+	if (size > 0)
+	{
+		while (src[i] && i < size - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	i = 0;
+	while (src[i])
+	{
+		i++;
+	}
+	return (i);
 }
+
+/* int main(void)
+{
+	const char src[] = "Hello World";
+	char dst1[10];
+	char dst2[10];
+	size_t len1;
+	size_t len2;
+
+	len1 = strlcpy(dst2, src, sizeof(dst1));
+	printf("Destino: %s\n", dst2);
+	printf("Comprimento: %zu\n", len1);
+
+	len2 = ft_strlcpy(dst1, src, sizeof(dst2));
+	printf("Destino: %s\n", dst1);
+	printf("Comprimento: %zu\n", len2);
+} */
