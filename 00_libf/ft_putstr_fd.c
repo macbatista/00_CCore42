@@ -1,25 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 12:07:49 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/15 12:08:29 by mcrispim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar_fd(char c, int fd)
+/* void ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
-}
-void ft_putstr_fd(char *s, int fd)
-{
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar_fd(s[i],fd);
-        i++;
-    }
-    
+	write(fd, &c, 1);
+} */
+void	ft_putstr_fd(char *s, int fd)
+{
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }
 
-int main(void)
+/* int main(void)
 {
-    char str[8] = "mcrispim";
-    ft_putstr_fd(str,1);
-}
+	char str[8] = "mcrispim";
+	ft_putstr_fd(str,1);
+} */
