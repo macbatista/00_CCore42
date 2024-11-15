@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 11:26:05 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/15 11:26:17 by mcrispim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,7 +31,7 @@ char	*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const char src[11] = "Hello World";
 	size_t n = 10;
@@ -31,4 +43,4 @@ int	main(void)
 	char *str2;
 	str2 = ft_strndup(src, n);
 	printf("    a minha:%s\n", str2);
-}
+} */
