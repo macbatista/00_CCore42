@@ -6,14 +6,14 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:07:46 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 12:39:27 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 12:51:55 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
 
