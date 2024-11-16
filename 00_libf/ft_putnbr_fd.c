@@ -16,14 +16,14 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		nbr = n * -1;
 	}
-	else 
+	else
 		nbr = n;
 	if (nbr > 9)
 	{
@@ -33,7 +33,6 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd((nbr + 48), fd);
 }
-
 
 /*   int main(void)
 {
