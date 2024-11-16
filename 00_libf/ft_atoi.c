@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:27:53 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:16:53 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 10:31:04 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int	sign;
-	int	value;
+	int		sign;
+	int		value;
 
 	value = 0;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:41:29 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:17:03 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:18:18 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* void *ft_memset(void *b, int c, size_t len)
-{
-	size_t	i;
-	char	*a;
-	void	*ptr;
-
-	i = 0;
-	a = b;
-	while (i < len)
-	{
-		a[i] = c;
-		i++;
-	}
-	return (b);
-} */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
+	char	*ptr;
+
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);

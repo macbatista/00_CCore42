@@ -6,23 +6,13 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 09:17:18 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:18:31 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:20:26 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/* size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-} */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -53,6 +43,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t len = 5;
 
 	char *str = ft_substr(v[1], start, len);
-man atoin
 	printf("%s\n", str);
 } */

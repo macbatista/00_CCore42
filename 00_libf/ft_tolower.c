@@ -6,14 +6,13 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 00:53:58 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:18:37 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:15:02 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
-#include <xlocale.h>
 
 int	ft_tolower(int c)
 {

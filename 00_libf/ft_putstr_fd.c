@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:07:49 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:18:03 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:21:20 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	size_t	i;
+
 	i = 0;
 	while (s[i])
 	{
