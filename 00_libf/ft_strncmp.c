@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:19:02 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:18:24 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 13:59:21 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
+	if (!n)
+		return (0);
+	while ((s1[i] == s2[i]) && s1[i] && s2[i] && i < (n - 1))
 		i++;
-	}
-	return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 /* int main(int argc, char *argv[])
