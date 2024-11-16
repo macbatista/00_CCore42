@@ -6,10 +6,11 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:07:40 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/15 12:07:41 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 10:17:50 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)

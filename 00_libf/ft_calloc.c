@@ -6,10 +6,11 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:41:29 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/15 10:51:17 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 10:17:03 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

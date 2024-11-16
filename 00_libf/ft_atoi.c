@@ -6,17 +6,18 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:27:53 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/11 01:04:57 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 10:16:53 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
+	size_t	i;
 	int	sign;
 	int	value;
 
