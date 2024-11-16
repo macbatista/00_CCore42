@@ -6,13 +6,14 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:19:09 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:18:27 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:42:18 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -37,7 +38,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-/* int main(int c, char **v)
+ int main(int c, char **v)
 {
 	(void)c;
 
@@ -57,4 +58,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		printf("%s\n", result2);
 	else
 		printf("NULL\n");
-} */
+} 
