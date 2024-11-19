@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:04:34 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/19 09:37:34 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/19 09:46:42 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-	(void) c;
 	size_t len;
 	
 	len = ft_strlen(s);
