@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 08:51:17 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:17:33 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/16 14:15:02 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t		i;
-	const char	*csrc;
-	char		*cdst;
+	size_t			i;
+	unsigned char	*csrc;
+	unsigned char	*cdst;
 
-	csrc = src;
-	cdst = dst;
+	if (!src && !dst)
+		return (NULL);
+	csrc = (unsigned char *) src;
+	cdst = (unsigned char *) dst;
 	i = 0;
 	while (i < n)
 	{
