@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:34:27 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/19 10:50:59 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:23:56 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
 	k = 0;
-	str = (char *)malloc((i + j) * sizeof(char));
+	str = (char *)malloc((i + j + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (k < i)
@@ -37,10 +37,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[k] = s2[k - i];
 		k++;
 	}
+	str[k] = '\0';
 	return (str);
 }
 
-/* int	main(void)
+/*   int	main(void)
 {
 	printf("Join:%s\n", ft_strjoin("abc", "defg"));
-} */
+}   */
