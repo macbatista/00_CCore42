@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 09:05:31 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/22 13:17:20 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/22 13:52:25 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,18 @@ char	*ft_itoa(int n)
 	return (rt);
 }
 
-int	main(void)
+/* int	main(void)
 {
-	printf("%s\n", ft_itoa(INT_MIN));
-	printf("%s\n", ft_itoa(INT_MAX));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-1));
-	printf("%s\n", ft_itoa(-23456789));
-	printf("%s\n", ft_itoa(123456789));
-}
+	printf("     Esperado:-2147483648\nResultado:%s\n\n", ft_itoa(INT_MIN));
+	printf("     Esperado:2147483647\nResultado:%s\n\n", ft_itoa(INT_MAX));
+	printf("     Esperado:0\nResultado:%s\n\n", ft_itoa(0));
+	printf("     Esperado:-1\nResultado:%s\n\n", ft_itoa(-1));
+	printf("     Esperado:-23456789\nResultado:%s\n\n", ft_itoa(-23456789));
+	printf("     Esperado:123456789\nResultado:%s\n\n", ft_itoa(123456789));
+	printf("     Esperado:42\nResultado:%s\n\n", ft_itoa(42));
+	printf("     Esperado:-42\nResultado:%s\n\n", ft_itoa(-42));
+	printf("     Esperado:1000000000\nResultado:%s\n\n", ft_itoa(1000000000));
+	printf("     Esperado:-1000000000\nResultado:%s\n\n", ft_itoa(-1000000000));
+	printf("     Esperado:999999999\nResultado:%s\n\n", ft_itoa(999999999));
+	printf("     Esperado:-999999999\nResultado:%s\n\n", ft_itoa(-999999999));
+} */
