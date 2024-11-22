@@ -6,7 +6,7 @@
 #    By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 12:51:22 by mcrispim          #+#    #+#              #
-#    Updated: 2024/11/19 10:53:01 by mcrispim         ###   ########.fr        #
+#    Updated: 2024/11/19 13:37:56 by mcrispim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS = ft_atoi.c \
 	   ft_strncmp.c \
        ft_strnstr.c \
 	   ft_strrchr.c \
+	   ft_strtrim.c \
 	   ft_substr.c \
 	   ft_tolower.c \
        ft_toupper.c
