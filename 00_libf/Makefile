@@ -6,7 +6,7 @@
 #    By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 12:51:22 by mcrispim          #+#    #+#              #
-#    Updated: 2024/11/19 13:37:56 by mcrispim         ###   ########.fr        #
+#    Updated: 2024/11/22 12:11:36 by mcrispim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS = ft_atoi.c \
 	   ft_isascii.c \
 	   ft_isdigit.c \
 	   ft_isprint.c \
+	   ft_itoa.c \
 	   ft_memchr.c \
 	   ft_memcmp.c \
        ft_memcpy.c \
