@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:27:53 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 10:31:04 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:16:13 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 	return (value *= sign);
 }
 
-/*  int	main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	char	min[] = "-2147483648";
 	char	max[] = "21474836479";
@@ -50,11 +50,13 @@ int	ft_atoi(const char *nptr)
 	if (argc > 1)
 	{
 		printf("Feito     : %d \n", ft_atoi(argv[1]));
-		printf("Feito     : %d \n", ft_atoi(min));
-		printf("Feito     : %d \n", ft_atoi(max));
-		printf("Feito     : %d \n", ft_atoi(argv[1]));
-		printf("Verdadeiro: %d \n", atoi(min));
-		printf("Verdadeiro: %d \n", atoi(max));
 		printf("Verdadeiro: %d \n", atoi(argv[1]));
+		printf("Feito     : %d \n", ft_atoi(min));
+		printf("Verdadeiro: %d \n", atoi(min));
+		printf("Feito     : %d \n", ft_atoi(max));
+		printf("Verdadeiro: %d \n", atoi(max));
+		printf("Feito     : %d \n", ft_atoi(argv[1]));
+		printf("Verdadeiro: %d \n", atoi("1111111111111"));
+		printf("Feito     : %d \n", ft_atoi("1111111111111"));
 	}
-} */
+}

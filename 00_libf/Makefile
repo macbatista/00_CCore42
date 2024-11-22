@@ -6,7 +6,7 @@
 #    By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 12:51:22 by mcrispim          #+#    #+#              #
-#    Updated: 2024/11/22 12:11:36 by mcrispim         ###   ########.fr        #
+#    Updated: 2024/11/22 14:34:44 by mcrispim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS = ft_atoi.c \
        ft_strlcat.c \
 	   ft_strlcpy.c \
 	   ft_strlen.c \
+	   ft_strmapi.c \
 	   ft_strncmp.c \
        ft_strnstr.c \
 	   ft_strrchr.c \
