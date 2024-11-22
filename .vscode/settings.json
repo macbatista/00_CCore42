@@ -1,5 +1,9 @@
 {
     "42header.email": "mcrispim@student.42lisboa.com",
     "42header.username": "mcrispim",
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "libft.h": "c",
+        "string.h": "c"
+    }
 }
