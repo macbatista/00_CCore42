@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 09:05:31 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/22 12:07:45 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/22 13:17:20 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <limits.h>
 #include <stdio.h>
 
-int	ft_int_size(int n)
+static int	ft_int_size(int n)
 {
 	int	sz;
 
@@ -36,17 +36,16 @@ int	ft_int_size(int n)
 	return (sz);
 }
 
-char	*ft_itoa(int n)
+char	*ft_populate(int n, int sz, char *rt)
 {
-	int				sz;
-	char			*rt;
 	unsigned int	nbr;
 
-	sz = ft_int_size(n);
-	rt = (char *)malloc(sz + 1 * sizeof(char));
-	if (!rt)
-		return (NULL);
 	rt[sz] = '\0';
+	if (n == 0)
+	{
+		rt[0] = (0 + 48);
+		return (rt);
+	}
 	if (n < 0)
 	{
 		rt[0] = '-';
@@ -64,11 +63,24 @@ char	*ft_itoa(int n)
 	return (rt);
 }
 
+char	*ft_itoa(int n)
+{
+	int		sz;
+	char	*rt;
+
+	sz = ft_int_size(n);
+	rt = (char *)malloc(sz + 1 * sizeof(char));
+	if (!rt)
+		return (NULL);
+	rt = ft_populate(n, sz, rt);
+	return (rt);
+}
+
 int	main(void)
 {
 	printf("%s\n", ft_itoa(INT_MIN));
 	printf("%s\n", ft_itoa(INT_MAX));
-	printf("%s\n", ft_itoa(1));
+	printf("%s\n", ft_itoa(0));
 	printf("%s\n", ft_itoa(-1));
 	printf("%s\n", ft_itoa(-23456789));
 	printf("%s\n", ft_itoa(123456789));
