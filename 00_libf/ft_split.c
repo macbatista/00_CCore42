@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:35:10 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/22 21:53:49 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/23 16:22:57 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_delimiter_counter(char const *s, char c)
+size_t	ft_word_counter(char const *s, char c)
 {
 	size_t	i;
 	size_t	n;
 
-	if (!s)
+	if (!s || s[0] == '\0')
 		return (0);
 	i = 0;
 	n = 0;
 	while (s[i])
 	{
-		i++;
-		if (s[i] == c)
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
 			n++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
-	n++;
 	return (n);
 }
 
@@ -40,7 +42,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	strs = ft_delimiter_counter(s, c);
+	strs = ft_word_counter(s, c);
+	printf("%zu\n",strs);
 	rt = malloc((strs + 1) * sizeof(char *));
 	if (!rt)
 		return (NULL);
@@ -63,7 +66,7 @@ int	main(void)
 	char	**split;
 	int		i;
 
-	str = "Hello World";
+	str = "  1      ";
 	split = ft_split(str, ' ');
 	i = 0;
 	while (split[i])

@@ -4,6 +4,6 @@
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "libft.h": "c",
-        "string.h": "c"
+        "string.h": "c",
     }
 }
