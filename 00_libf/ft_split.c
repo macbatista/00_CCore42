@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 20:35:10 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/23 16:22:57 by mcrispim         ###   ########.fr       */
+/*   Created: 2024/11/23 18:41:36 by mcrispim          #+#    #+#             */
+/*   Updated: 2024/11/23 18:41:37 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ size_t	ft_word_counter(char const *s, char c)
 	size_t	i;
 	size_t	n;
 
-	if (!s || s[0] == '\0')
-		return (0);
 	i = 0;
 	n = 0;
+	if (!s || s[0] == '\0')
+		return (0);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -35,32 +35,79 @@ size_t	ft_word_counter(char const *s, char c)
 	return (n);
 }
 
+size_t	ft_word_size(char const *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+void	ft_free_memory(char **rt, size_t i)
+{
+	while (i > 0)
+	{
+		free(rt[i - 1]);
+		i--;
+	}
+	free(rt);
+}
+
+char	**ft_allocate_memory(char const *s, char c, size_t strs)
+{
+	char	**rt;
+	size_t	i;
+
+	i = 0;
+	rt = malloc((strs + 1) * sizeof(char *));
+	if (!rt)
+		return (NULL);
+	while (i < strs)
+	{
+		while (*s == c)
+			s++;
+		rt[i] = malloc((ft_word_size(s, c) + 1) * sizeof(char));
+		if (!rt[i])
+		{
+			ft_free_memory(rt, i);
+			return (NULL);
+		}
+		s += ft_word_size(s, c);
+		i++;
+	}
+	rt[i] = NULL;
+	return (rt);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	strs;
 	char	**rt;
+	size_t	i;
+	size_t	j;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	strs = ft_word_counter(s, c);
-	printf("%zu\n",strs);
-	rt = malloc((strs + 1) * sizeof(char *));
+	rt = ft_allocate_memory(s, c, strs);
 	if (!rt)
 		return (NULL);
-	rt[0] = malloc(5 * sizeof(char));
-	rt[1] = malloc(5 * sizeof(char));
-	if (!rt[0] || !rt[1])
+	while (i < strs)
 	{
-		free(rt);
-		return (NULL);
+		while (*s == c)
+			s++;
+		j = 0;
+		while (j < ft_word_size(s, c))
+			rt[i][j++] = *s++;
+		rt[i++][j] = '\0';
 	}
-	rt[0] = "Test";
-	rt[1] = "Data";
-	rt[strs] = NULL;
 	return (rt);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*str;
 	char	**split;
@@ -72,7 +119,9 @@ int	main(void)
 	while (split[i])
 	{
 		printf("%s\n", split[i]);
+		free(split[i]);
 		i++;
 	}
+	free(split);
 	return (0);
-}
+} */
