@@ -6,7 +6,7 @@
 #    By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 12:51:22 by mcrispim          #+#    #+#              #
-#    Updated: 2024/11/23 18:44:50 by mcrispim         ###   ########.fr        #
+#    Updated: 2024/11/25 11:13:39 by mcrispim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,16 +56,19 @@ CFLAGS			= -Wall -Wextra -Werror
 all:			$(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo -e "\033[42mCompilando: $< -> $@"\033[0m
 
 $(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+				@ar rcs $(NAME) $(OBJS)
+				@echo -e "\033[1;31;42mAll DONE\033[0m"
 
 clean:
-				$(RM) $(OBJS)
+				@$(RM) $(OBJS)
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
+				@echo -e "\033[1;32;41mALL REMOVED\033[0m"
 
 re:				fclean $(NAME)
 
