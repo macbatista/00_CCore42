@@ -6,14 +6,14 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 18:56:02 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/23 19:04:04 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:07:36 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	ft_word_counter(char const *s, char c)
+static size_t	ft_word_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -24,7 +24,7 @@ static size_t	ft_word_counter(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] != '\0')
+		if (s[i])
 			count++;
 		while (s[i] && s[i] != c)
 			i++;
@@ -37,59 +37,43 @@ static size_t	ft_word_size(char const *s, char c)
 	size_t	size;
 
 	size = 0;
-	while (s && s[size] && s[size] != c)
+	while (s[size] && s[size] != c)
 		size++;
 	return (size);
 }
 
-static void	ft_free_memory(char **array, size_t words)
+static char	**ft_free_and_return(char **array, size_t i)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < words)
-	{
+	while (i--)
 		free(array[i]);
-		i++;
-	}
 	free(array);
+	return (NULL);
 }
 
-static char	*ft_next_word(char const *s, char c)
-{
-	while (*s == c)
-		s++;
-	return ((char *)s);
-}
-
-static char	**ft_allocate_result(size_t word_count)
+static char	**ft_allocate_and_fill(char const *s, char c, size_t word_count)
 {
 	char	**result;
-
-	result = (char **)malloc((word_count + 1) * sizeof(char *));
-	if (result)
-		result[word_count] = NULL;
-	return (result);
-}
-
-static int	ft_fill_result(char **result, char const *s, char c, size_t word_count)
-{
 	size_t	i;
 	size_t	word_len;
 
+	result = (char **)malloc((word_count + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
 	i = 0;
 	while (i < word_count)
 	{
-		s = ft_next_word(s, c);
+		while (*s == c)
+			s++;
 		word_len = ft_word_size(s, c);
 		result[i] = (char *)malloc((word_len + 1) * sizeof(char));
 		if (!result[i])
-			return (ft_free_memory(result, i), 0);
+			return (ft_free_and_return(result, i));
 		ft_strlcpy(result[i], s, word_len + 1);
 		s += word_len;
 		i++;
 	}
-	return (1);
+	result[word_count] = NULL;
+	return (result);
 }
 
 char	**ft_split(char const *s, char c)
@@ -99,12 +83,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	word_count = ft_word_counter(s, c);
-	result = ft_allocate_result(word_count);
-	if (!result)
-		return (NULL);
-	if (!ft_fill_result(result, s, c, word_count))
-		return (NULL);
+	word_count = ft_word_count(s, c);
+	result = ft_allocate_and_fill(s, c, word_count);
 	return (result);
 }
 
