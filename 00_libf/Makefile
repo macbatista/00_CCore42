@@ -6,7 +6,7 @@
 #    By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/16 12:51:22 by mcrispim          #+#    #+#              #
-#    Updated: 2024/11/25 11:13:39 by mcrispim         ###   ########.fr        #
+#    Updated: 2024/11/25 12:24:58 by mcrispim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,21 +54,22 @@ RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
 all:			$(NAME)
-
+	
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo -e "\033[42mCompilando: $< -> $@"\033[0m
+	@echo "\033[43mCompiling: $< -> $@"\
 
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
-				@echo -e "\033[1;31;42mAll DONE\033[0m"
+				@echo "\033[1;31;42mAll DONE\033[0m"
 
 clean:
 				@$(RM) $(OBJS)
+				@echo "\033[43mFiles .o deleted successfully\033[0m"
 
 fclean:			clean
 				@$(RM) $(NAME)
-				@echo -e "\033[1;32;41mALL REMOVED\033[0m"
+				@echo "\033[1;32;41m$(NAME) deleted successfully\033[0m"
 
 re:				fclean $(NAME)
 
