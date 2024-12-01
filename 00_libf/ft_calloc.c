@@ -6,7 +6,7 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:41:29 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/11/16 11:18:18 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/11/30 23:15:12 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,31 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*ptr;
+	void	*j;
+	size_t	max;
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	max = nmemb * size;
+	if (nmemb && size && (max / size != nmemb))
 		return (NULL);
-	ft_memset(ptr, 0, (nmemb * size));
-	return (ptr);
+	j = malloc(max);
+	if (!j)
+		return (NULL);
+	ft_bzero(j, max);
+	return (j);
 }
 
-/* int main(void)
+/*    int main(void)
 {
-	size_t size = 6;
+	size_t size = 0;
 	size_t nmemb = 2;
 
-	char *ptr1 = calloc(nmemb, size);
-	if (ptr1 != NULL)
+	char *ptr10 = calloc(nmemb, size);
+	if (ptr10 != NULL)
 	{
-		strncpy(ptr1, "TestTestTest", size - 1);
-		strncpy(ptr1 + size, "tESTtESTtEST", size - 1);
-		ptr1[size - 1] = '\0';
-		printf("String: %s\n", ptr1);
+		strncpy(ptr10, "TestTestTest", size - 1);
+		strncpy(ptr10 + size, "tESTtESTtEST", size - 1);
+		ptr10[size - 1] = '\0';
+		printf("Original String: %s\n", ptr10);
 	}
 	else
 	{
@@ -47,13 +51,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t i = 0;
 	while (i < (size * nmemb))
 	{
-		if (ptr1[i] == '\0')
+		if (ptr10[i] == '\0')
 		{
 			printf("[\\0]");
 		}
 		else
 		{
-			printf("%c", ptr1[i]);
+			printf("%c", ptr10[i]);
 		}
 		i++;
 	}
@@ -66,7 +70,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		strncpy(ptr0, "TestTestTest", size - 1);
 		strncpy(ptr0 + size, "tESTtESTtEST", size - 1);
 		ptr0[size - 1] = '\0';
-		printf("String: %s\n", ptr0);
+		printf("Minha String: %s\n", ptr0);
 	}
 	else
 	{
@@ -88,4 +92,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 
 	printf("\n");
-} */
+}   */ 
