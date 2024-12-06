@@ -6,14 +6,11 @@
 /*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 16:47:37 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/12/06 18:30:20 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/12/06 18:54:04 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include "00_libf/libft.h"
+#include "printf.h"
 
 int	ft_printf(const char *n, ...)
 {
@@ -29,14 +26,9 @@ int	ft_printf(const char *n, ...)
 		if (n[i] == '%')
 		{
 			if (n[i + 1] == 'c')
-            {
-                ft_putchar_fd((char){va_arg(you, int)}, 1);
-				rt++;
-			}
+                rt += ft_putchar((char){va_arg(you, int)});
             if (n[i + 1] == 's')
-			{
-				ft_putstr_fd(va_arg(you, char *),1);
-			}
+			    rt += ft_putstr(va_arg(you, char *));
 			i += 2;
 		}
 		write(1, &n[i], 1);
