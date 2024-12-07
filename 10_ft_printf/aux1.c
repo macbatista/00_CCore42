@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   aux1.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mcrispim <mcrispim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 18:45:06 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/12/07 09:56:54 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/12/07 11:38:21 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putchar(char c)
 
 int	ft_putstr(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
