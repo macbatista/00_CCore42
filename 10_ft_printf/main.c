@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcrispim <mcrispim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcrispim <mcrispim@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 16:47:37 by mcrispim          #+#    #+#             */
-/*   Updated: 2024/12/07 12:40:10 by mcrispim         ###   ########.fr       */
+/*   Updated: 2024/12/08 10:23:33 by mcrispim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,5 +115,9 @@ int	main(void)
 	rt = printf("Ori:%p\n", "asdfghjkl");
 	printf("\n\nRt:%d\n\n", rt);
 	rt = ft_printf("meu:%p\n", "asdfghjkl");
+	printf("\n\nRt:%d\n\n", rt);
+		rt = printf("Ori:%%\n");
+	printf("\n\nRt:%d\n\n", rt);
+	rt = ft_printf("meu:%%\n");
 	printf("\n\nRt:%d\n\n", rt);
 }
